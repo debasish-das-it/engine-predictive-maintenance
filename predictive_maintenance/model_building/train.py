@@ -8,6 +8,7 @@ from sklearn.metrics import accuracy_score, classification_report, recall_score
 import xgboost as xgb
 import joblib
 import mlflow
+from huggingface_hub import login, HfApi
 
 mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment("predictive-maintenance-experiment")
