@@ -1,0 +1,28 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets
+.env
+.env.*
+
+# MLflow tracking
+mlruns/
+mlartifacts/
+
+# Generated report build folders
+word_report_build_*/
+report_assets/
+
+# Local IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
