@@ -7,7 +7,7 @@ HF_USER = user_info["name"]
 print("Authenticated as:", HF_USER)
 
 # Repo identifiers used throughout the notebook
-APP_REPO_ID = f"{HF_USER}/engine-predictive-maintenance"
+APP_REPO_ID = f"{HF_USER}/engine-predictive-maintenance-app"
  # Step 1: Check if the model repo exists
 try:
     api.repo_info(repo_id=APP_REPO_ID, repo_type="space")
