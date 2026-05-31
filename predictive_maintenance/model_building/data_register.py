@@ -8,8 +8,8 @@ user_info = api.whoami()
 HF_USER = user_info["name"]
 print("Authenticated as:", HF_USER)
 
-PROJECT_ROOT = Path.cwd()
-DATA_DIR = PROJECT_ROOT / "predictive_maintenance" / "data"
+
+DATA_DIR = "predictive_maintenance/data"
 
 # Repo identifiers used throughout the notebook
 DATASET_REPO_ID = f"{HF_USER}/engine-predictive-maintenance"
