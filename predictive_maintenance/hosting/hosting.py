@@ -10,11 +10,11 @@ print("Authenticated as:", HF_USER)
 APP_REPO_ID = f"{HF_USER}/engine-predictive-maintenance"
  # Step 1: Check if the model repo exists
 try:
-    api.repo_info(repo_id=APP_REPO_ID, repo_type="model")
+    api.repo_info(repo_id=APP_REPO_ID, repo_type="space")
     print(f"Model repository '{APP_REPO_ID}' already exists. Using it.")
 except RepositoryNotFoundError:
     print(f"Model repository '{APP_REPO_ID}' not found. Creating new repository...")
-    create_repo(repo_id=APP_REPO_ID, repo_type="model", private=False)
+    create_repo(repo_id=APP_REPO_ID, repo_type="space", private=False)
     print(f"Model repository '{APP_REPO_ID}' created.")
 
 api.upload_folder(
