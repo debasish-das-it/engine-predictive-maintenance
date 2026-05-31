@@ -58,7 +58,7 @@ files = ["Xtrain.csv","Xtest.csv","ytrain.csv","ytest.csv"]
 
 for file_path in files:
     api.upload_file(
-        path_or_fileobj=DATA_DIR / file_path,
+        path_or_fileobj=os.path.join(DATA_DIR, file_path),
         path_in_repo=file_path,  # just the filename
         repo_id=DATASET_REPO_ID,
         repo_type="dataset",
