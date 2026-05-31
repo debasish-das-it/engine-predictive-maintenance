@@ -15,7 +15,7 @@ try:
     print(f"Model repository '{APP_REPO_ID}' already exists. Using it.")
 except RepositoryNotFoundError:
     print(f"Model repository '{APP_REPO_ID}' not found. Creating new repository...")
-    create_repo(repo_id=APP_REPO_ID, repo_type="space", private=False)
+    create_repo(repo_id=APP_REPO_ID, repo_type="space", private=False, space_sdk="docker")
     print(f"Model repository '{APP_REPO_ID}' created.")
 
 api.upload_folder(
