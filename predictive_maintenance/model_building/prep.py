@@ -14,8 +14,8 @@ user_info = api.whoami()
 HF_USER = user_info["name"]
 print("Authenticated as:", HF_USER)
 
-PROJECT_ROOT = Path.cwd()
-DATA_DIR = PROJECT_ROOT / "predictive_maintenance" / "data"
+
+DATA_DIR = "predictive_maintenance/data"
 
 # Repo identifiers used throughout the notebook
 DATASET_REPO_ID = f"{HF_USER}/engine-predictive-maintenance"
@@ -48,10 +48,10 @@ Xtrain, Xtest, ytrain, ytest = train_test_split(
     random_state=42    # Ensures reproducibility by setting a fixed random seed
 )
 
-Xtrain.to_csv(DATA_DIR / "Xtrain.csv", index=False)
-Xtest.to_csv(DATA_DIR / "Xtest.csv", index=False)
-ytrain.to_csv(DATA_DIR / "ytrain.csv", index=False)
-ytest.to_csv(DATA_DIR / "ytest.csv", index=False)
+Xtrain.to_csv(os.path.join(DATA_DIR, "Xtrain.csv"), index=False)
+Xtest.to_csv(os.path.join(DATA_DIR, "Xtest.csv"), index=False)
+ytrain.to_csv(os.path.join(DATA_DIR, "ytrain.csv"), index=False)
+ytest.to_csv(os.path.join(DATA_DIR, "ytest.csv"), index=False)
 
 
 files = ["Xtrain.csv","Xtest.csv","ytrain.csv","ytest.csv"]
